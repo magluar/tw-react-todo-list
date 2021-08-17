@@ -22,8 +22,20 @@ const initialState = todosAdapter.getInitialState({
 const todosSlice= createSlice({
     name: "todos",
     initialState: initialState,
-    reducers: {},
+    reducers: {
+        AddTodo(state, action) {
+            console.log("action bb", action);
+            return state;
+        },
+        DeleteTodo() {
+
+        }
+    },
 });
+
+// export default todosSlice.reducer.AddTodo;
+
+export const {AddTodo} = todosSlice.actions;
 
 export default todosSlice.reducer;
 
