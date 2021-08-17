@@ -23,8 +23,11 @@ function TodoForm() {
             placeholder="Input TODO item"
             value={text}
             onChange={handleChange}></input>
+            <div>
+                <br></br>
             <button id="addBtn"
             onClick={handlerAdd}>Add</button>
+            </div>
         </div>
     )
 }

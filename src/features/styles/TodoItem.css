@@ -1,4 +1,15 @@
 .TodoItem-todo.done {
-    color: green;
+    color: gray;
     text-decoration: line-through;
+    /* background-color: lightgoldenrodyellow; */
+    background-color: lightgray;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.TodoItem-todo {
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    padding: 5px;
 }
