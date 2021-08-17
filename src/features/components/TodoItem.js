@@ -4,7 +4,7 @@ import {getTodoById} from "../../common/utils/utils";
 
 function TodoItem(props) {
     const todo = getTodoById(initialToDoList, props.id);
-    return <div> {todo.text} {props.id} {todo.test}</div>;
+    return <div> {todo.text}</div>;
 }
 
 export default TodoItem
