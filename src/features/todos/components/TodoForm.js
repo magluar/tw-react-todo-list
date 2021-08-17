@@ -5,7 +5,7 @@ import "../../styles/TodoForm.css"
 function TodoForm() {
     const [text, setText] = useState("");
 
-    function changeHandler(event) {
+    function handleChange(event) {
         setText(event.target.value);
     }
 
@@ -17,7 +17,7 @@ function TodoForm() {
             <input type="text"
             placeholder="Input TODO item"
             value={text}
-            onChange={changeHandler}></input>
+            onChange={handleChange}></input>
             <button id="addBtn"
             onClick={handlerAdd}>Add</button>
         </div>
