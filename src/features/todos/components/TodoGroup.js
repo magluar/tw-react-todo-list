@@ -10,7 +10,6 @@ function TodoGroup() {
 
     return (
         <div>
-           TodoGroup
             {
                 todoIds.map((id) => (
                     <TodoItem key={id} id={id}/>
