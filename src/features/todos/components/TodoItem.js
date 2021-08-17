@@ -1,11 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import {selectTodoIds} from "../../todos/reducers/todosSlice"
+import { useDispatch, useSelector } from 'react-redux';
+import {selectTodoIds, ToggleToDo} from "../../todos/reducers/todosSlice"
+import "../../styles/TodoItem.css"
 
 function TodoItem(props) {
     const todo = useSelector(state => selectTodoIds(state, props.id))
-    // const todo = getTodoById(initialToDoList, props.id);
-    return <div> {todo.text}</div>;
+    const dispatch = useDispatch();
+
+    function handleClick(){
+        dispatch(ToggleToDo(props.id));
+    }
+
+    const todoStatus = todo.done ? "done" : "";
+    
+    return <div onClick={handleClick}
+    className={`TodoItem-todo ${todoStatus}`}> {todo.text}</div>;
 }
 
 export default TodoItem;
