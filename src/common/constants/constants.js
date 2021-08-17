@@ -4,4 +4,9 @@ export const initialToDoList = [
         text: "todo example",
         done: false
     },
+    {
+        id: "cc53dc26-61b0-406b-99dd-b8825dd2ceex",
+        text: "todo example1!!!",
+        done: false
+    },
 ];
