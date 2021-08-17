@@ -14,6 +14,7 @@ function TodoForm() {
 
     function handlerAdd() {
         dispatch(AddTodo(text));
+        setText("");
     }
 
     return (
