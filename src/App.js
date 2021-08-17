@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import TodoItem from './features/components/TodoItem';
-import TodoGroup from './features/components/TodoGroup';
+import TodoItem from './features/todos/components/TodoItem';
+import TodoGroup from './features/todos/components/TodoGroup';
 
 function App() {
   return (

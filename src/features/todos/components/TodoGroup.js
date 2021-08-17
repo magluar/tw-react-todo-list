@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoItem from './TodoItem'
-import {initialToDoList} from "../../common/constants/constants"
-import {getAllTodoIds} from "../../common/utils/utils"
+import {initialToDoList} from "../../../common/constants/constants"
+import {getAllTodoIds} from "../../../common/utils/utils"
 
 function TodoGroup() {
     return (
@@ -15,4 +15,4 @@ function TodoGroup() {
     )
 }
 
-export default TodoGroup
+export default TodoGroup;
