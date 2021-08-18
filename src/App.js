@@ -8,11 +8,29 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <ul>
-          <Link to="/">go to the todo list page</Link>
-          <br></br>
-          <Link to="/done">go to done page</Link>
-        </ul>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarText">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+            <Link to="/" className="nav-link text-muted" href="#">Todo-List</Link>
+        </li>
+        <li className="nav-item">
+            <Link to="/done" className="nav-link text-muted" href="#">Done-List</Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        {/* <ul>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ul> */}
         <Switch>
           <Route exact path="/" component={ToDoList}></Route>
           <Route exact path="/done" component={DoneList}></Route>
