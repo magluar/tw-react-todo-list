@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import TodoForm from './TodoForm'
 import TodoGroup from './TodoGroup'
 import "../../styles/TodoForm.css"
+import "animate.css"
 import { useDispatch } from 'react-redux'
 import { addTodos } from '../reducers/todosSlice'
 import { getTodos } from '../../apis/todo'

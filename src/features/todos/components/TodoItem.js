@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {selectTodoIds, ToggleToDo, DeleteTodo} from "../../todos/reducers/todosSlice"
 import "../../styles/TodoItem.css"
+import "animate.css"
 import { deleteTodo, updateTodo } from '../../apis/todo';
 
 function TodoItem(props) {
@@ -25,7 +26,7 @@ function TodoItem(props) {
     const todoStatus = todo.done ? "done" : "";
 
     return <div><div onClick={handleTodo}
-    className={`TodoItem-todo ${todoStatus}`}><h5>{todo.text}
+    className={`TodoItem-todo ${todoStatus} animate__bounceIn`}><h5>{todo.text}
     <button className="btn btn-outline-dark deleteBtn" 
     onClick={handleDeleteClick}>X</button></h5>
 
