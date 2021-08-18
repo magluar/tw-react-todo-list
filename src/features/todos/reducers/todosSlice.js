@@ -11,7 +11,6 @@ const initialState = todosAdapter.getInitialState({
             done: false,
         },
     },
-    
 });
 
 const todosSlice= createSlice({
