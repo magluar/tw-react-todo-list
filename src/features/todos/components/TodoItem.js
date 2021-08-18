@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {selectTodoIds, ToggleToDo, DeleteTodo} from "../../todos/reducers/todosSlice"
 import "../../styles/TodoItem.css"
-import { updateTodo } from '../../apis/todo';
+import { deleteTodo, updateTodo } from '../../apis/todo';
 
 function TodoItem(props) {
     const todo = useSelector(state => selectTodoIds(state, props.id))
@@ -10,15 +10,17 @@ function TodoItem(props) {
 
     function handleTodo(){
         updateTodo(props.id, {done: !todo.done}).then((response) => {
-            console.log(response);
         dispatch(ToggleToDo(props.id));
         });
     }
 
     function handleDeleteClick(event){
+        deleteTodo(props.id).then((response) =>{
+            dispatch(DeleteTodo(props.id));                
+        })
         event.stopPropagation(event);
-        dispatch(DeleteTodo(props.id));
-    }
+
+}
 
     const todoStatus = todo.done ? "done" : "";
 
