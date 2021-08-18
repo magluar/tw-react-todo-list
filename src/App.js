@@ -3,6 +3,7 @@ import ToDoList from './features/todos/components/ToDoList';
 import {Route, Link, BrowserRouter, Switch, HashRouter} from "react-router-dom";
 import NotFoundPage from './features/notfound/NotFoundPage';
 import ToDoItem from './features/todos/components/TodoItem';
+import DoneList from './features/todos/components/DoneList';
 
 function App() {
   return (
@@ -10,9 +11,12 @@ function App() {
       <BrowserRouter>
         <ul>
           <Link to="/">go to the todo list page</Link>
+          <br></br>
+          <Link to="/done">go to done page</Link>
         </ul>
         <Switch>
           <Route exact path="/" component={ToDoList}></Route>
+          <Route exact path="/done" component={DoneList}></Route>
           <Route exact path="*" component={NotFoundPage}></Route>
         </Switch>
       </BrowserRouter>
