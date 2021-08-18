@@ -3,18 +3,20 @@ import { useEffect } from 'react'
 import TodoForm from './TodoForm'
 import TodoGroup from './TodoGroup'
 import "../../styles/TodoForm.css"
-import { useSelector } from 'react-redux'
-import { selectToDoIds } from '../reducers/todosSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectToDoIds, addTodos } from '../reducers/todosSlice'
 import { getTodos } from '../../apis/todo'
+
 
 function ToDoList() {
     const todoIds = useSelector(selectToDoIds);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         getTodos().then((response) => {
-            // console.log(response);
+            dispatch(addTodos(response.data));
         })
-    }, [])
+    }, [dispatch])
 
     return (
         <div>

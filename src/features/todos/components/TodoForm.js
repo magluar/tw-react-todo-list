@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addTodo } from '../../apis/todo';
 import "../../styles/TodoForm.css"
 import {AddTodo} from "../../todos/reducers/todosSlice"
 
@@ -13,7 +14,9 @@ function TodoForm() {
     }
 
     function handlerAdd() {
-        dispatch(AddTodo(text));
+        addTodo(text).then((response) => {
+            dispatch(AddTodo(text));
+        })
         setText("");
     }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import todosSlice, { selectDoneList } from '../reducers/todosSlice';
+import { selectDoneList } from '../reducers/todosSlice';
 import { useSelector } from 'react-redux'
 import TodoItem from './TodoItem';
 

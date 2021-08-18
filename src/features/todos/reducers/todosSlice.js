@@ -28,10 +28,13 @@ const todosSlice= createSlice({
             const todo = state.entities[action.payload];
             todo.done = !todo.done;
         },
+        addTodos(state, action) {
+            todosAdapter.addMany(state, action.payload);
+        }
     },
 });
 
-export const {AddTodo, ToggleToDo} = todosSlice.actions;
+export const {AddTodo, ToggleToDo, addTodos} = todosSlice.actions;
 
 export default todosSlice.reducer;
 

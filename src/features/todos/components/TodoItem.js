@@ -12,9 +12,9 @@ function TodoItem(props) {
     }
 
     const todoStatus = todo.done ? "done" : "";
-    
-    return <div onClick={handleClick}
-    className={`TodoItem-todo ${todoStatus}`}> {todo.text}</div>;
+
+    return <div><div onClick={handleClick}
+    className={`TodoItem-todo ${todoStatus}`}>{todo.text}<span id="deleteBtn">X</span></div></div>;
 }
 
 export default TodoItem;
