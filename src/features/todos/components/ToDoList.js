@@ -12,7 +12,7 @@ function ToDoList() {
 
     useEffect(() => {
         getTodos().then((response) => {
-            console.log(response);
+            // console.log(response);
         })
     }, [])
 
