@@ -1,7 +1,7 @@
 .TodoForm {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
-#addBtn {
-    margin-left: 5px;
+.addInput {
+    text-align: center;
 }

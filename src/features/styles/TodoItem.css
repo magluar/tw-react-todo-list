@@ -1,19 +1,37 @@
 .TodoItem-todo.done {
     color: gray;
     text-decoration: line-through;
-    /* background-color: lightgoldenrodyellow; */
-    background-color: lightgray;
+    background-color: lightgoldenrodyellow;
     font-family:'Times New Roman', Times, serif;
 }
 
-.TodoItem-todo {
-    margin-top: 20px;
+ .TodoItem-todo {
     border: 1px solid black;
-    width: 50%;
+    width: 80%;
     margin: auto;
     padding: 5px;
 }
 
-#deleteBtn {
-    margin-left: 60%;
+.deleteBtn {
+    padding: 0;
+    border: none;
+    background: none;
+    float: inline-end;
+    margin-right: 5px;
+}
+
+.marginLeft{
+    margin-left: 30%;
+}
+
+.marginRight{
+    margin-right: 30%;
+}
+
+/* .marginTop{
+    margin-top: 5%;
+} */
+
+.todoText {
+    display: inline-block;
 }

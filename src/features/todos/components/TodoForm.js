@@ -22,15 +22,10 @@ function TodoForm() {
 
     return (
         <div className="TodoForm">
-            <input type="text"
-            placeholder="Input TODO item"
-            value={text}
-            onChange={handleChange}></input>
-            <div>
+                <input type="text" className="form-control addInput" placeholder="Add Todo item" align="center" aria-label="Recipient's username" aria-describedby="button-addon2"
+                value={text} onChange={handleChange}></input>
                 <br></br>
-            <button id="addBtn"
-            onClick={handlerAdd}>Add</button>
-            </div>
+                <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={handlerAdd}>Add</button>
         </div>
     )
 }

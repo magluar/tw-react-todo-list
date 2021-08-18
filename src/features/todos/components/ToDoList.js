@@ -19,12 +19,23 @@ function ToDoList() {
     }, [dispatch])
 
     return (
-        <div>
-            <h1>TodoList</h1>
-            <TodoGroup/>
-            <TodoForm/>
+        // <div>
+        //     <h1>TodoList</h1>
+        //     <TodoGroup/>
+        //     <TodoForm/>
+        // </div>
+        <div className="card marginLeft marginRight marginTop">
+        <div className="card-header">
+          Todo List
         </div>
-    )
+        <div className="card-body">
+          {/* <p className="card-text">With supporting text below as a natural lead-in to additional content.</p> */}
+          <TodoGroup/>
+          <TodoForm/>
+          {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+        </div>
+      </div>
+        )
 }
 
 export default ToDoList;

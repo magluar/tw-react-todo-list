@@ -25,8 +25,11 @@ function TodoItem(props) {
     const todoStatus = todo.done ? "done" : "";
 
     return <div><div onClick={handleTodo}
-    className={`TodoItem-todo ${todoStatus}`}>{todo.text}<span id="deleteBtn" 
-    onClick={handleDeleteClick}>X</span></div></div>;
+    className={`TodoItem-todo ${todoStatus}`}><h5>{todo.text}
+    <button className="btn btn-outline-dark deleteBtn" 
+    onClick={handleDeleteClick}>X</button></h5>
+
+    </div></div>;
 }
 
 export default TodoItem;
