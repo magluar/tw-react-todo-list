@@ -7,7 +7,7 @@
 
  .TodoItem-todo {
     border: 1px solid black;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 5px;
 }
@@ -28,9 +28,9 @@
     margin-right: 30%;
 }
 
-/* .marginTop{
-    margin-top: 5%;
-} */
+.marginTop{
+    margin-top: 1%;
+}
 
 .todoText {
     display: inline-block;
