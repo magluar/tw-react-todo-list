@@ -5,7 +5,7 @@ export const getTodos = () => {
 }
 
 export const addTodo = (text) => {
-    return api.post("/todos", {text});
+    return api.post("/todos", {text: text, done: false});
 }
 
 export const updateTodo = (id, done) => {

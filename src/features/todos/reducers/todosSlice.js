@@ -1,5 +1,4 @@
 import { createSlice , createEntityAdapter, createSelector} from "@reduxjs/toolkit";
-import {v4 as uuid} from "uuid";
 
 const todosAdapter = createEntityAdapter();
 
@@ -10,11 +9,7 @@ const todosSlice= createSlice({
     initialState: initialState,
     reducers: {
         AddTodo(state, action) {
-            todosAdapter.addOne(state, {
-                id: uuid(),
-                text: action.payload,
-                done: false,
-            });
+            todosAdapter.addOne(state, action.payload);
         },
         ToggleToDo(state, action) {
             const todo = state.entities[action.payload];

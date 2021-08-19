@@ -6,7 +6,9 @@
 }
 
  .TodoItem-todo {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin-top: 5px;
+    background-color: lightyellow;
     width: 90%;
     margin: auto;
     padding: 5px;

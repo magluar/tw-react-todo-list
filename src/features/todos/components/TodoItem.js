@@ -10,17 +10,16 @@ function TodoItem(props) {
     const dispatch = useDispatch();
 
     function handleTodo(){
-        updateTodo(props.id, {done: !todo.done}).then((response) => {
+        updateTodo(props.id, {done: !todo.done}).then(() => {
         dispatch(ToggleToDo(props.id));
         });
     }
 
     function handleDeleteClick(event){
-        deleteTodo(props.id).then((response) =>{
+        deleteTodo(props.id).then(() =>{
             dispatch(DeleteTodo(props.id));                
         })
         event.stopPropagation(event);
-
 }
 
     const todoStatus = todo.done ? "done" : "";
