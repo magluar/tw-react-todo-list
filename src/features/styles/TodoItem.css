@@ -8,7 +8,7 @@
  .TodoItem-todo {
     /* border: 1px solid black; */
     margin-top: 5px;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
     width: 90%;
     margin: auto;
     padding: 5px;
@@ -20,6 +20,18 @@
     background: none;
     float: inline-end;
     margin-right: 5px;
+}
+
+.editBtn.done {
+    visibility: hidden;
+}
+
+.editBtn {
+    float: inline-end;
+    margin-left: 5px;
+    margin-top: 1%;
+    padding: 0;
+    border: none;
 }
 
 .marginLeft{

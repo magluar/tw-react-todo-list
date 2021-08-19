@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
