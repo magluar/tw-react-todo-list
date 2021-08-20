@@ -33,8 +33,8 @@ function TodoItem(props) {
     }
 
     function handleEdit() {
-        updateTodo(props.id, { text }).then(() => {
-            dispatch(updateTodoItem(props.id));
+        updateTodo(props.id, {text}).then((response) => {
+            dispatch(updateTodoItem(response.data));
         });
     }
     function handleTextChange(event) {

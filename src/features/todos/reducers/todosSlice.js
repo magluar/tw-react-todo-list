@@ -24,9 +24,8 @@ const todosSlice= createSlice({
         updateTodoItem(state, action) {
             todosAdapter.updateOne(state, {
                 id: action.payload.id,
-                text: action.payload.text,
+                changes: action.payload,
             });
-        return state;
         }
     },
 });
